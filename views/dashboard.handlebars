@@ -13,3 +13,18 @@
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
+
+{{#if blogs.length}}
+<section>
+  <h2>Your Blogs</h2>
+  <ol>
+    {{#each blogs as |blog|}}
+    <li>
+      {{> blog-info blog}}
+      <a href="/dashboard/edit/{{blog.id}}" class="edit-link">Edit blog</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+<!--<script src="/javascript/add-post.js"></script>
