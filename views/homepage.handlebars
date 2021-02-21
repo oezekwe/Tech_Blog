@@ -1,1 +1,7 @@
-<div>This is were all posts go.</div>
+<ol class="blog-list">
+  {{#each blogs as |blog|}}
+  <li>
+    {{> blogInfo blog }}
+  </li>
+  {{/each}}
+</ol>
